@@ -1,13 +1,16 @@
 package WWW::Ruten;
-use 5.8.0;
-use warnings;
+{
+  $WWW::Ruten::VERSION = '0.03';
+}
+# ABSTRACT: Scripting www.ruten.com.tw
+
+use 5.008;
 use strict;
+use warnings;
 use WWW::Mechanize 1.66;
 use Encode;
 use HTML::TreeBuilder::XPath;
 use HTML::Selector::XPath;
-
-our $VERSION = '0.02';
 
 sub new {
     my ($class) = @_;
@@ -73,7 +76,9 @@ sub _do_search {
 
 1;
 
+
 __END__
+=pod
 
 =head1 NAME
 
@@ -81,7 +86,7 @@ WWW::Ruten - Scripting www.ruten.com.tw
 
 =head1 VERSION
 
-This document describes WWW::Ruten version 0.01
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -98,9 +103,7 @@ This document describes WWW::Ruten version 0.01
 
 =head1 DESCRIPTION
 
-
 =head1 INTERFACE 
-
 
 =over
 
@@ -137,7 +140,6 @@ No bugs have been reported.
 Please report any bugs or feature requests to
 C<bug-www-ruten@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>.
-
 
 =head1 AUTHOR
 
@@ -189,3 +191,18 @@ RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
 FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
 SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
 SUCH DAMAGES.
+
+=head1 AUTHOR
+
+Kang-min Liu <gugod@gugod.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2011 by Kang-min Liu.
+
+This is free software, licensed under:
+
+  The MIT (X11) License
+
+=cut
+
